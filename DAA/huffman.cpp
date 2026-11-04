@@ -42,15 +42,16 @@ void printCode(Node *root, string code)
     printCode(root->right, code + "1");
 }
 
-int main()
-{
-    priority_queue<Node*, vector<Node*>, Compare> pq;
+int main() {
+    priority_queue<Node *, vector<Node *>, Compare> pq;
+
     int n;
     char ch;
     int freq;
 
     cout << "Enter number of characters: ";
     cin >> n;
+
     for (int i = 0; i < n; i++)
     {
         cout << "Enter character and frequency: ";
@@ -77,7 +78,7 @@ int main()
 
     Node *root = pq.top();
 
-    cout << "Huffman:" << endl;
+    cout << "\nHuffman Codes:" << endl;
     printCode(root, "");
 
     return 0;
